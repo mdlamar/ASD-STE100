@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+STE_KIT_REPO="${STE_KIT_REPO:-mdlamar/ASD-STE100}"
+
+if [[ -z "${BASH_SOURCE[0]:-}" ]]; then
+    CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/asd-ste100"
+    if [[ ! -d "$CACHE_DIR/.git" ]]; then
+        git clone -q --depth 1 "https://github.com/$STE_KIT_REPO.git" "$CACHE_DIR"
+    else
+        git -C "$CACHE_DIR" pull -q --ff-only
+    fi
+    exec "$CACHE_DIR/install.sh" "$@"
+fi
+
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILL_NAME="ste-writing"
 SKILL_SRC="$REPO_DIR/skill/$SKILL_NAME/SKILL.md"
