@@ -81,6 +81,10 @@ def lint(text):
     }
 
 if __name__ == "__main__":
+    if any(a in ("-h", "--help") for a in sys.argv[1:]):
+        print("usage: ste-lint [FILE ...]")
+        print("Lint text files for STE violations. Reads stdin when no file is given.")
+        sys.exit(0)
     files = sys.argv[1:] or []
     if not files:
         print(json.dumps(lint(sys.stdin.read()), indent=2)); sys.exit(0)

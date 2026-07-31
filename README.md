@@ -92,6 +92,18 @@ python3 scripts/ste-lint.py tests/sloppy.md   # high per100w
 python3 scripts/ste-lint.py tests/clean.md    # ~0 per100w
 ```
 
+## Troubleshooting
+
+### "Code highlighting failed, falling back to plain text: TreeSitter client destroyed"
+
+This message is not a bug in this kit. It is an opencode TUI shutdown race: when
+you quit the TUI while a code block is still being syntax-highlighted, the
+TreeSitter client is destroyed mid-request and opencode logs the fallback
+warning. The text still renders; only that one code block skips highlighting.
+
+Nothing in this kit runs in the TUI renderer, so it cannot cause this. Ignore
+it, or track the upstream issue: https://github.com/anomalyco/opencode/issues/36454
+
 ## License
 
 This work is dedicated to the public domain under
