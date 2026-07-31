@@ -51,7 +51,7 @@ when you `git pull` this repo.
 On any machine:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mdlamar/ASD-STE100/main/install.sh | bash
+curl -fsSL https://github.com/mdlamar/ASD-STE100/raw/refs/heads/main/install.sh | bash
 ```
 
 ### Uninstall
