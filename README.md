@@ -92,6 +92,14 @@ python3 scripts/ste-lint.py tests/sloppy.md   # high per100w
 python3 scripts/ste-lint.py tests/clean.md    # ~0 per100w
 ```
 
+## License
+
+This work is dedicated to the public domain under
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) —
+see [LICENSE](LICENSE). No rights reserved. Take it, use it, sell it, remix
+it. If it was ever "found money", consider it a penny on the sidewalk:
+yours now.
+
 ## Credits
 
 - Original kit: [woosal1337/blog — ep01-the-cure-for-ai-slop](https://github.com/woosal1337/blog/tree/main/videos/ep01-the-cure-for-ai-slop)
