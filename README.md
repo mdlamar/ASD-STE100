@@ -48,13 +48,11 @@ when you `git pull` this repo.
 
 ### Install from GitHub
 
-Push this repo to GitHub, then on any machine:
+On any machine:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<OWNER>/<REPO>/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mdlamar/ASD-STE100/main/install.sh | bash
 ```
-
-Replace `<OWNER>/<REPO>` with the actual location.
 
 ### Uninstall
 
